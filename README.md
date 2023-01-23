@@ -1,4 +1,4 @@
-## Here I share my experience and troubleshooting i faced during when  I Use the following tutorial steps to download and run a simple app in a Docker container for the first time:
+## Here I share my experience and troubles i faced during when  I Use the following tutorial steps to download and run a simple app in a Docker container for the first time:
 
 This tutorial was written with the intent to tell every one  about my experience performing the tasks in this exercise. Include any troubleshooting i did, as well as improvements I'd make to the existing procedure to make it more clear. :
 
