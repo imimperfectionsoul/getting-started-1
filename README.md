@@ -1,8 +1,8 @@
-## Here I share my experience and troubles i faced during when  I Use the following tutorial steps to download and run a simple app in a Docker container for the first time:
+## Here I share my experience and troubles I faced during when  I Used the following steps to download and run a simple app in a Docker container for the first time:
 
-This tutorial was written with the intent to tell every one  about my experience performing the tasks in this exercise. Include any troubleshooting i did, as well as improvements I'd make to the existing procedure to make it more clear. :
+This was written with the intent to tell everyone about my experience performing the tasks in this exercise. Include any troubleshooting I did, as well as improvements I'd make to the existing procedure to make it more clear. :
 
-First we have to installed Docker and there Respective Supporting Eniroment for smoothing experience :
+First, we have to install Docker and their Respective Supporting Environment for smoothing experience :
 
 - Installed Docker Desktop .
 - A Git client.
@@ -10,19 +10,18 @@ First we have to installed Docker and there Respective Supporting Eniroment for 
 - A conceptual understanding of containers and images.
 
 ## Step 1:
-
 Get the app
-Before i can run the application, i need to get the application source code onto your machine.
+Before I can run the application, I need to get the application source code onto your machine.
 
 Clone the getting-started repository using the following command:
 ```bash
 git clone https://github.com/docker/getting-started.git
 ```
-View the contents of the cloned repository. Inside the getting-started/app directory I  see package.json and two subdirectories (src and spec).
+View the contents of the cloned repository. Inside the getting-started/app directory, I  see package.json and two subdirectories (src and spec).
 
 In order to build the container image, I need to use a Dockerfile. A Dockerfile is simply a text-based file with no file extension. A Dockerfile contains a script of instructions that Docker uses to create a container image.
 
-In the app directory, the same location as the package.json file, I create a file named Dockerfile. where i can use the following commands below to create a Dockerfile .
+In the app directory, the same location as the package.json file, I create a file named Dockerfile. where I can use the following commands below to create a Dockerfile.
 
 Mac 
 In the terminal, run the following commands listed below.
@@ -196,9 +195,8 @@ Go ahead and remove the container when i was done checking out my list.
  
 A bind mount is another type of mount, which lets you share a directory from the host’s filesystem into the container. When working on an application, you can use a bind mount to mount source code into the container. The container sees the changes you make to the code immediately, as soon as you save a file. This means that you can run processes in the container that watch for filesystem changes and respond to them
 
-In other word when i change the source code into the container that change immediately shown in My App When i Just referesh it .
-
-The following steps steps i followed  how to run a development container with a bind mount that does the following:
+In other words, when I change the source code into the container that changes is immediately shown in My App When I Just refresh it.
+The following steps i followed  how to run a development container with a bind mount that does the following:
 
 - Mount our source code into the container
 - Install all dependencies
@@ -242,8 +240,8 @@ Start a MySQL container and attach it to the network. We’re also going to defi
  ```bash
  docker exec -it <mysql-container-id> mysql -u root -p
 ```
-- After Connecting with the Network Run my app with MySQL
- but i faced some issue because in these existing procedure are not clear but after some research from online guide and portal i found the error and correct and as connect the container to our app network
+- After Connecting with the Network & Run my app with MySQL
+ but I faced some issues because in these existing procedures are not clear after some research from the online guide and portal I found the error and correct and as connect the container to our app network
  
  ```bash
  docker run -dp 3000:3000 \
@@ -270,12 +268,16 @@ Connect to the mysql database and prove that the items are being written to the 
  - the most challenging  part of these assesment is connectincting the conatiner to the server because many time file not found the location in the database of app and gave error  .
  ## Use Docker Compose;
  
- Docker Compose is a tool that was developed to help define and share multi-container applications. With Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down. in these just follow the existing procedure  and completed where i define the app service by using the some command .
+ docker Compose is a tool that was developed to help define and share multi-container applications. With Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down. in these just follow the existing procedure and completed where I define the app service by using some command.
  
  ## Image-building best practices;
  In these have built an image, it is a good practice to scan it for security vulnerabilities using the docker scan command. Docker has partnered with Snyk to provide the vulnerability scanning service.
  
  ## Image layering and Layer caching :
-  the docker image history command to see the layers in the getting-started image i created earlier in the App.
-  Going back to the image history output, i see that each command in the Dockerfile becomes a new layer in the image. 
-  To fix this, i had to restructure our Dockerfile to help support the caching of the dependencies. For Node-based applications, those dependencies are defined in the package.json file.
+  The docker image history command to see the layers in the getting-started image I created earlier in the App.
+  Going back to the image history output, I saw that each command in the Dockerfile becomes a new layer in the image. 
+  To fix this, I had to restructure our Dockerfile to help support the caching of the dependencies. For Node-based applications, those dependencies are defined in the package.json file.
+  
+  ## EXPERIENCE 
+  -The overall experience of this assessment is amazing where I encountered so many challenges  I faced the first time while setting up the Docker and running the app with some repeating errors after code evaluation and guidelines I was able to resolve them. I found myself in a great position after when I connect the docker to the network or server before that I found it difficult to run the app along with SQL because docker is unable to find a file when I run the SQL command. After that, I go through the guidelines and was able to complete all the remaining tasks to run an Application in Docker.
+  - for troubleshooting the problem I advise all to read and follow the guidance and for Prerequisites Read something about your system and Operating system . because it reduces some fatal error that is caused by it. and for my experience, I found many of the steps are understandable and clear but you can find more about some open source and other sources to get more ways to sort out your problem or error you faced. like I faced a problem connecting with the database so I re-evaluate the code and read the guideline some open sources that are useful over the guidelines helped me a lot to Docker containers be used to make deploying and maintaining applications easier.
